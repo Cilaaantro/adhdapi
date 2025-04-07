@@ -23,7 +23,9 @@ app.post('/api',async (req,res)=>{
   res.status(StatusCodes.ACCEPTED).json({success:true, data:summary})
 })
 
-app.listen(5000, ()=>{
-  console.log('listening on port 5000');
+app.listen(3000, ()=>{
+  console.log('listening on port 3000');
 })
 //
+
+module.exports=app;
