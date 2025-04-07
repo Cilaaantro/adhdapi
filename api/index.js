@@ -4,6 +4,9 @@ require('dotenv').config();
 const StatusCodes=require('http-status-codes');
 const { GoogleGenAI } = require("@google/genai");
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const cors = require('cors');
+app.use(cors());
+
 
 async function summarize(data) {
   const instructions=`Summarize the following content "${data}" And just generate plain text of only alphabets ans spaces, Caps allowd, puncatations allowed., limit to high level overview, like 150 words would be enough`;
