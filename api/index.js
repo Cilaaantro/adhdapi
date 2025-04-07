@@ -23,7 +23,7 @@ app.use(express.json());
 app.get("/", (req, res) => res.send("Express on Vercel"));
 app.post('/api',async (req,res)=>{
   const summary=await summarize(req.body.data);
-  res.status(StatusCodes.ACCEPTED).json({success:true, data:summary})
+  res.status(StatusCodes.ACCEPTED).json([{success:true, output:summary}])
 })
 
 app.listen(3000, ()=>{
