@@ -9,7 +9,7 @@ app.use(cors());
 
 
 async function summarize(data) {
-  const instructions=`Summarize the following content "${data}" And just generate plain text of only alphabets ans spaces, Caps allowd, puncatations allowed., limit to high level overview, like 150 words would be enough`;
+  const instructions=`Summarize the following content "${data}" And just generate plain text of only alphabets and spaces, propper caps, puncatations allowed., limit to high level overview, like 150 words would be enough`;
   const response = await ai.models.generateContent({
     model: "gemini-2.0-flash",
     contents: instructions,
